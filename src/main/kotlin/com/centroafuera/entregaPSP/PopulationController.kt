@@ -10,7 +10,7 @@ class PopulationController(private val PopulationRepository : PopulationReposito
         return PopulationRepository.findAll()
     }
 
-    @GetMapping("/nation/id")
+    @GetMapping("/nation/{id}")
     fun getStudent(@PathVariable id : Long) : Population {
         return PopulationRepository.findById(id).get()
     }
